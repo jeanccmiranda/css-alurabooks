@@ -1,0 +1,98 @@
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 24px;
+    gap: 8px;
+}
+
+
+.newsletter__header, .newsletter__text{
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.newsletter__header{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--azul-escuro);
+}
+
+.newsletter__text{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--azul-escuro);
+}
+
+.newsletter__input{
+    background: transparent;
+    border: 1px solid var(--azul-escuro);
+    border-radius: 24px;
+    padding: 10px;
+}
+
+.newsletter__input::placeholder{
+    background-image: url(../img/icons/Email.svg);
+    background-repeat: no-repeat;
+    background-position: 1em;
+    color: var(--azul-escuro);
+    padding-left: 48px;
+}
+
+.newsletter__input:focus{
+    padding-left: 15%;
+    border: 2px solid var(--azul-escuro);
+    outline: none;
+}
+.newsletter__input:focus::-webkit-input-placeholder{
+    color: transparent;
+    background: none;
+}
+
+
+@media screen and (min-width: 1024px){
+    .newsletter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "newsletter__header newsletter__input"
+        "newsletter__text newsletter__input";
+        justify-items: center;
+
+        padding: 30px 10vw 54px 10vw;
+    }
+
+    .newsletter__header{
+        font-size: 24px;
+        grid-area: newsletter__header;
+        width: 50%;
+    }
+
+    .newsletter__text{
+        display: flex;
+        grid-area: newsletter__text;
+        width: 50%;
+    }
+    
+    .newsletter__input{
+        grid-area: newsletter__input;
+        height: fit-content;
+        align-self: center;
+        margin-right: auto;
+        width: 70%;
+        box-sizing: border-box;
+    }
+
+    .newsletter__input:focus{
+        grid-area: newsletter__input;
+        height: fit-content;
+        align-self: center;
+        width: 70%;
+        padding-left: 30px;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+}

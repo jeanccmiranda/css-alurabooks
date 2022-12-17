@@ -1,0 +1,33 @@
+.section__header{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--laranja);
+    line-height: 27px;
+    background-color: white;
+    text-align: center;
+    padding: 1.2em 0 0.5em;
+}
+
+
+@media screen and (min-width: 1024px){
+    .section__header{
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .section--grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-template-areas: 
+        "section__header section__header"
+        "swiper article";
+        margin: auto;
+    }
+
+    .section__header{
+        grid-area: section__header;
+        font-size: 32px;
+    }
+}
